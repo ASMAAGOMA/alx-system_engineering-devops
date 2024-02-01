@@ -18,4 +18,4 @@ sudo sed -i "53i $text" /etc/nginx/sites-enabled/default
 CONFIG="\\\n\tadd_header X-Served-By '$(hostname)';"
 sudo sed -i "24i $CONFIG" /etc/nginx/sites-enabled/default
 
-sudo service nginx start
+sudo service nginx start.m
