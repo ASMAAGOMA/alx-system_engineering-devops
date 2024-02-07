@@ -1,5 +1,11 @@
 #install flask from pip3
-exec { 'install_flask':
-  command => '/usr/bin/pip3 install Flask Werkzeug --upgrade',
-  path    => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+package { 'flask':
+  ensure   => '2.1.0',
+  provider => 'pip3'
+}
+
+# Ensure the correct version of Werkzeug is installed
+package { 'Werkzeug':
+  ensure   => '0.15.5', # or whichever version is compatible
+  provider => 'pip3'
 }
