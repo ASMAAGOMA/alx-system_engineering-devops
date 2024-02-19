@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""to do"""
 import requests
 import sys
 
@@ -6,6 +7,7 @@ API = "https://jsonplaceholder.typicode.com"
 
 
 def get_employee_info(employee_id):
+    """to do"""
     response = requests.get(f"{API}/users/{employee_id}")
     if not response.ok:
         sys.exit("Failed to retrieve employee information.")
@@ -13,6 +15,7 @@ def get_employee_info(employee_id):
 
 
 def get_employee_todos(employee_id):
+    """to do"""
     response = requests.get(f"{API}/todos?userId={employee_id}")
     if not response.ok:
         sys.exit("Failed to retrieve employee TODO list.")
@@ -20,6 +23,7 @@ def get_employee_todos(employee_id):
 
 
 def main():
+    """to do"""
     if len(sys.argv) != 2:
         sys.exit("Usage: python script_name.py EMPLOYEE_ID")
 
