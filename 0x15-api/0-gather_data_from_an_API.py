@@ -39,6 +39,5 @@ def main():
     for task in completed_tasks:
         print(f"\t{task['title']}")
 
-
 if __name__ == "__main__":
     main()
